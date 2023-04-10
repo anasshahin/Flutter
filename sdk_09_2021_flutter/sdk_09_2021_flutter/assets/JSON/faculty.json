@@ -1,0 +1,17 @@
+{
+  "name": "IT",
+  "majors": [
+    "SE",
+    "CS"
+  ],
+  "subject": [
+    {
+      "subjectName": "C++",
+      "teacher": "Ali Salim"
+    },
+    {
+      "subjectName": "C#",
+      "teacher": "Baraa Ageel"
+    }
+  ]
+}

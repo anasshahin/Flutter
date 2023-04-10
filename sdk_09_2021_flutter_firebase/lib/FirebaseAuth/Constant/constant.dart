@@ -1,0 +1,1 @@
+const String avatar = 'https://ps.w.org/simple-user-avatar/assets/icon-256x256.png?rev=2413146';
