@@ -1,12 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/quiz%20app/first_way/fisrt%20_question.dart';
 
 import 'Dismissible widget/dismissible_widget.dart';
-import 'Expandable List/expandable_list.dart';
-import 'Expandable List/marquee_wid.dart';
-import 'List Wheel ScrollView/list_wheel_scrollview_wid.dart';
+import 'InteractiveViewer/interactive_viwer.dart';
 import 'Percent Indicator/percent_indicator.dart';
-void main() {
-  runApp(const MyApp());
+import 'Radio Button & check box/check_box_widget.dart';
+import 'Radio Button & check box/dop_down_button_wid.dart';
+import 'Radio Button & check box/radio_button_widget.dart';
+import 'Radio Button & check box/radio_list_tile.dart';
+import 'Splash Screen & page view/Page View/page_view.dart';
+import 'Splash Screen & page view/splash_screen.dart';
+import 'bars/Google Nav Bar/google_nav_bar.dart';
+import 'image_st & color/Image Slider/image_slider_wi.dart';
+import 'lists/Expandable List/expandable_list.dart';
+import 'lists/Expandable List/marquee_wid.dart';
+
+void main() async{
+  /*WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance() ;
+ var insert=prefs.getBool('insert');
+ Widget  myPrefState=(insert== false || null == insert)?  const MainPageView():const Question();*/
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,10 +34,30 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:const  ListWheelScrollViewWidget(),
+      home:   const ExpandableListWidget(),
     );
   }
 }
+class MainPageView extends StatelessWidget {
+  const MainPageView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp (
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      routes: {
+        '/a':(ctx)=>const Question(),
+        '/b':(ctx)=>const SplashScreenWidget(),
+      },
+      home:  const PageViewWidget(),
+    );
+  }
+}
+
     class ThemeAppColors extends StatefulWidget {
   const ThemeAppColors({Key? key}) : super(key: key);
 

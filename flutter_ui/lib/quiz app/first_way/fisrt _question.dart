@@ -14,48 +14,50 @@ class _QuestionState extends State<Question> {
   int yourGrade=0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Quiz')),
-      body: Center(
-        child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Text(question[questionNumber]['questionText'],),
-              ),
-
-              ...question[questionNumber]['answers'] .map((e) {
-            return    Column(
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Quiz')),
+        body: Center(
+          child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: ElevatedButton(
-                     
-                      onPressed: () {
-                        setState(() {
-                          isStart = false;
-                          print(e);
-                          print(question[questionNumber]['write answer']);
-                          if (question[questionNumber]['write answer'].toString()==e)yourGrade++;
-                          questionNumber++;
-                          if (questionNumber == question.length) {
-                            questionNumber = 0;
-                            Navigator.of(context).popAndPushNamed( '/x',result: yourGrade);
-                          }
-                        });
-                      },
-                      child: Text(e),
-                  style: ButtonStyle(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(question[questionNumber]['questionText'],),
+                ),
 
-                    minimumSize: MaterialStateProperty.all(const Size(100, 20)),
-                    fixedSize: MaterialStateProperty.all(const Size(300, 20)),
-                  )),
-                ) ,
-              ],
-            );
-          }).toList()
-          ]
+                ...question[questionNumber]['answers'] .map((e) {
+              return    Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: ElevatedButton(
 
+                        onPressed: () {
+                          setState(() {
+                            isStart = false;
+                            print(e);
+                            print(question[questionNumber]['write answer']);
+                            if (question[questionNumber]['write answer'].toString()==e)yourGrade++;
+                            questionNumber++;
+                            if (questionNumber == question.length) {
+                              questionNumber = 0;
+                              Navigator.of(context).popAndPushNamed( '/x',result: yourGrade);
+                            }
+                          });
+                        },
+                        child: Text(e),
+                    style: ButtonStyle(
+
+                      minimumSize: MaterialStateProperty.all(const Size(100, 20)),
+                      fixedSize: MaterialStateProperty.all(const Size(300, 20)),
+                    )),
+                  ) ,
+                ],
+              );
+            }).toList()
+            ]
+
+          ),
         ),
       ),
     );

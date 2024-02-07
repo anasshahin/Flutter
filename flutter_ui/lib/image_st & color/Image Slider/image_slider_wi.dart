@@ -64,7 +64,8 @@ class _ImageSliderWidgetState extends State<ImageSliderWidget> {
               height: 250,
               initialPage: 0,
                   enlargeCenterPage: true,
-            ) )
+            )
+            )
           ],
         ),
       ),

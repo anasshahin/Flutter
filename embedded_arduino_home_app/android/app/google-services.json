@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "634856163331",
+    "project_id": "my-bees-40070",
+    "storage_bucket": "my-bees-40070.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634856163331:android:dd23208857111175d8e636",
+        "android_client_info": {
+          "package_name": "com.example.embedded_arduino_home_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634856163331-qfpvtj1cmad2qh17e4cgbtq71579mvdo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.embedded_arduino_home_app",
+            "certificate_hash": "7438388c012742f294e80b6b4d2a20a8e1a24903"
+          }
+        },
+        {
+          "client_id": "634856163331-oqvje9129eisegh9pj6kggipotg94bam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWhurUfprXfY6syOBWtbElWK5GN8TGqK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634856163331-oqvje9129eisegh9pj6kggipotg94bam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
